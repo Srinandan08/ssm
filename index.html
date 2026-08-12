@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srinandan Veeraragavan | ECE Student & Python Enthusiast</title>
+  <meta name="description" content="Personal portfolio of Srinandan Veeraragavan, an Electronics and Communication Engineering student interested in Python, problem solving, technology, and engineering." />
+  
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Srinandan Veeraragavan | ECE Student & Python Enthusiast" />
+  <meta property="og:description" content="Second-year ECE student at SSMIET passionate about Python programming, technical problem solving, and modern engineering." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            darkbg: '#0B1220',
+            darkcard: '#111827',
+            navy: '#0B1220',
+            electric: '#2563EB',
+            cyanaccent: '#06B6D4'
+          },
+          animation: {
+            'spin-slow': 'spin 12s linear infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN for Tech & Sports Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B1220;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E293B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #06B6D4;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] dark:bg-[#0B1220] text-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-500 z-50 transition-all duration-75 w-0"></div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-white/85 dark:bg-[#0B1220]/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Logo / Brand -->
+      <a href="#home" class="flex items-center space-x-2.5 group focus:outline-none">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white font-bold font-mono text-base shadow-md group-hover:scale-105 transition-transform">
+          SV
+        </div>
+        <div>
+          <span class="font-bold tracking-tight text-sm sm:text-base block leading-tight">
+            Srinandan<span class="text-cyan-500">.V</span>
+          </span>
+          <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-mono">
+            ECE Student
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <nav class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+        <a href="#home" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors">Home</a>
+        <a href="#about" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors">About</a>
+        <a href="#education" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors">Education</a>
+        <a href="#skills" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#building" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors">Building</a>
+        <a href="#strengths" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors">Strengths</a>
+        <a href="#interests" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors">Interests</a>
+        <a href="#career" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors">Career Goal</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <!-- Theme Switcher -->
+        <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-yellow-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all focus:outline-none" aria-label="Toggle theme">
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Let's Connect CTA -->
+        <a href="#contact" class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all flex items-center space-x-1.5 active:scale-95">
+          <span>Let's Connect</span>
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="flex items-center space-x-2 lg:hidden">
+        <button id="themeToggleMobile" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-yellow-400" aria-label="Toggle theme">
+          <i id="themeIconMobile" class="fa-solid fa-moon"></i>
+        </button>
+        <button id="mobileMenuBtn" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-500/10" aria-label="Toggle menu">
+          <i id="mobileMenuIcon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 space-y-1 shadow-xl">
+      <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Home</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">About</a>
+      <a href="#education" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Education</a>
+      <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Skills</a>
+      <a href="#building" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Building</a>
+      <a href="#strengths" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Strengths</a>
+      <a href="#interests" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Interests</a>
+      <a href="#career" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Career Goal</a>
+      <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Projects & Learning</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-500/10">Contact</a>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-nav-link block w-full py-2.5 text-center text-sm font-semibold rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md">
+          Let's Connect
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16">
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden py-12 md:py-20">
+      
+      <!-- Interactive PCB Circuit Background Canvas -->
+      <canvas id="circuitCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60 z-0"></canvas>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Left Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Eyebrow Tag -->
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border text-xs font-mono font-semibold tracking-wider uppercase shadow-sm bg-blue-500/10 border-blue-500/30 text-blue-600 dark:text-cyan-400">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+              <span>ECE STUDENT • PYTHON ENTHUSIAST • PROBLEM SOLVER</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+              Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-400">Srinandan Veeraragavan</span>.
+            </h1>
+
+            <!-- Dynamic Typing Subtitle -->
+            <div class="text-lg sm:text-xl font-medium text-slate-600 dark:text-slate-300 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              <span>Aspiring Engineer &</span>
+              <span id="typingElement" class="text-cyan-500 dark:text-cyan-400 font-mono font-semibold border-r-2 border-cyan-400 pr-1 animate-pulse"></span>
+            </div>
+
+            <!-- Profile Overview Text -->
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Second-year B.E. Electronics and Communication Engineering student at SSM Institute of Engineering and Technology with an interest in Python, problem solving, and technology. Motivated to develop technical skills, explore new opportunities, and continuously grow through practical learning and projects.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a href="#about" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg shadow-blue-500/25 transition-all hover:scale-[1.02] flex items-center justify-center space-x-2 group">
+                <span>Explore My Portfolio</span>
+                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform text-xs"></i>
+              </a>
+
+              <a href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition-all flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-linkedin text-blue-500 text-base"></i>
+                <span>Connect on LinkedIn</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+              </a>
+
+              <button id="openResumeBtn" class="w-full sm:w-auto px-4 py-3.5 rounded-xl font-semibold text-xs border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900/50 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-all flex items-center justify-center space-x-1.5">
+                <i class="fa-solid fa-file-arrow-down text-sm"></i>
+                <span>Resume</span>
+              </button>
+            </div>
+
+            <!-- Quick Fact Badges -->
+            <div class="pt-6 border-t border-slate-200/60 dark:border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div class="p-3 rounded-xl bg-slate-500/5 border border-slate-500/10 text-left">
+                <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Location</span>
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">Tamil Nadu, India</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-500/5 border border-slate-500/10 text-left">
+                <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Degree</span>
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">B.E. ECE (2nd Year)</span>
+              </div>
+              <div class="col-span-2 sm:col-span-1 p-3 rounded-xl bg-slate-500/5 border border-slate-500/10 text-left">
+                <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Focus Area</span>
+                <span class="text-xs font-semibold text-cyan-600 dark:text-cyan-400">Python & Hardware</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Right Technology Visual -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md">
+              <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-600 to-cyan-500 opacity-20 blur-xl animate-pulse"></div>
+
+              <div class="relative rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 text-slate-800 dark:text-slate-200 shadow-2xl transition-all">
+                
+                <!-- Card Header -->
+                <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
+                  <div class="flex items-center space-x-3">
+                    <div class="p-2.5 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md">
+                      <i class="fa-solid fa-microchip text-lg"></i>
+                    </div>
+                    <div>
+                      <span class="font-mono text-xs font-bold text-cyan-500 uppercase tracking-widest block">ECE & SOFTWARE</span>
+                      <span class="font-bold text-sm">Tech Matrix</span>
+                    </div>
+                  </div>
+                  <div class="flex space-x-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-400/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-400/80"></span>
+                  </div>
+                </div>
+
+                <!-- Python Code Snippet -->
+                <div class="my-6 p-4 rounded-xl font-mono text-xs leading-relaxed bg-slate-950 text-slate-200 border border-slate-800 shadow-inner overflow-x-auto">
+                  <div class="text-slate-500 flex justify-between items-center mb-2 text-[10px] pb-1 border-b border-slate-800">
+                    <span>main.py</span>
+                    <span class="text-cyan-400 font-bold">PYTHON 3.x</span>
+                  </div>
+                  <p class="text-purple-400">class <span class="text-yellow-300">ECEStudent</span>:</p>
+                  <p class="pl-4 text-blue-300">def <span class="text-green-400">__init__</span>(self):</p>
+                  <p class="pl-8 text-slate-300">self.name = <span class="text-amber-300">"Srinandan V."</span></p>
+                  <p class="pl-8 text-slate-300">self.college = <span class="text-amber-300">"SSMIET"</span></p>
+                  <p class="pl-8 text-slate-300">self.skills = [<span class="text-amber-300">"Python"</span>, <span class="text-amber-300">"Problem Solving"</span>]</p>
+                  <br />
+                  <p class="pl-4 text-blue-300">def <span class="text-green-400">learn_and_grow</span>(self):</p>
+                  <p class="pl-8 text-cyan-400">return <span class="text-amber-300">"Continuous Technical Learning"</span></p>
+                </div>
+
+                <!-- Hardware Feature Grid -->
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                  <div class="p-3 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center space-x-2.5">
+                    <i class="fa-solid fa-circuit-board text-blue-500 text-lg shrink-0"></i>
+                    <div>
+                      <span class="text-[11px] font-bold block">Circuits & Logic</span>
+                      <span class="text-[10px] text-slate-500 dark:text-slate-400">ECE Core</span>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center space-x-2.5">
+                    <i class="fa-solid fa-code text-cyan-500 text-lg shrink-0"></i>
+                    <div>
+                      <span class="text-[11px] font-bold block">Python Learner</span>
+                      <span class="text-[10px] text-slate-500 dark:text-slate-400">Active Coding</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 relative border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">About Me</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Natural First Person Bio -->
+          <div class="lg:col-span-7 space-y-6 text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+            <div class="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 shadow-sm transition-all">
+              <p class="mb-4">
+                I'm currently pursuing a <strong class="text-slate-900 dark:text-slate-100">Bachelor of Engineering in Electronics and Communication Engineering</strong> at SSM Institute of Engineering and Technology. I'm interested in developing my programming and problem-solving abilities while building a strong foundation in engineering and technology.
+              </p>
+              <p>
+                I enjoy learning Python, exploring technical concepts, and improving my ability to approach problems logically. I'm also interested in discovering new technologies and gaining practical experience through projects, collaboration, and continuous learning.
+              </p>
+            </div>
+
+            <!-- Value Props Cards -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl border border-blue-500/20 bg-blue-500/5 flex items-start space-x-3">
+                <i class="fa-solid fa-brain text-blue-500 text-lg shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Logical Mindset</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Focusing on systematic problem decomposition and clear step-by-step reasoning.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl border border-cyan-500/20 bg-cyan-500/5 flex items-start space-x-3">
+                <i class="fa-solid fa-bolt text-cyan-500 text-lg shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Growth Driven</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Eager to transform theoretical academic concepts into real technical capabilities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Currently Learning Visual Card -->
+          <div class="lg:col-span-5">
+            <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl transition-all relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+              <div class="flex items-center space-x-3 mb-6">
+                <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-500">
+                  <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold">Currently Learning</h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Active skill development roadmap</p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 hover:border-cyan-500/40 transition-all group">
+                  <div class="flex items-center justify-between mb-1">
+                    <div class="flex items-center space-x-2.5">
+                      <i class="fa-brands fa-python text-cyan-500 text-lg group-hover:scale-110 transition-transform"></i>
+                      <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Python Programming</span>
+                    </div>
+                    <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">Active Focus</span>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 pl-6">Syntax, data structures, & algorithms</p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 hover:border-cyan-500/40 transition-all group">
+                  <div class="flex items-center justify-between mb-1">
+                    <div class="flex items-center space-x-2.5">
+                      <i class="fa-solid fa-puzzle-piece text-cyan-500 text-lg group-hover:scale-110 transition-transform"></i>
+                      <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Problem Solving</span>
+                    </div>
+                    <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">Core Priority</span>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 pl-6">Logical reasoning & debugging fundamentals</p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 hover:border-cyan-500/40 transition-all group">
+                  <div class="flex items-center justify-between mb-1">
+                    <div class="flex items-center space-x-2.5">
+                      <i class="fa-solid fa-terminal text-cyan-500 text-lg group-hover:scale-110 transition-transform"></i>
+                      <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Programming Fundamentals</span>
+                    </div>
+                    <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">Foundation</span>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 pl-6">Software architecture & logic design</p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 hover:border-cyan-500/40 transition-all group">
+                  <div class="flex items-center justify-between mb-1">
+                    <div class="flex items-center space-x-2.5">
+                      <i class="fa-solid fa-microchip text-cyan-500 text-lg group-hover:scale-110 transition-transform"></i>
+                      <span class="font-bold text-sm text-slate-800 dark:text-slate-200">ECE Core Concepts</span>
+                    </div>
+                    <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">Academic Core</span>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 pl-6">Circuits, signals, & hardware basics</p>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-800/80 text-center">
+                <span class="text-xs text-slate-500 dark:text-slate-400 italic">
+                  "Consistently expanding practical knowledge every day."
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-20 relative bg-slate-500/5 border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Education</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Academic background & institutional foundation</p>
+          <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-8">
+          
+          <!-- SSMIET Card -->
+          <div class="relative p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-lg transition-all hover:shadow-xl">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+              <div class="flex items-start space-x-4">
+                <div class="p-3.5 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md shrink-0">
+                  <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono font-bold text-cyan-500 uppercase tracking-wider block">Higher Education</span>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">SSM Institute of Engineering and Technology (SSMIET)</h3>
+                  <p class="text-sm font-semibold text-blue-600 dark:text-cyan-400 mt-0.5">Bachelor of Engineering (B.E.) — Electronics and Communication Engineering</p>
+                </div>
+              </div>
+
+              <div class="flex md:flex-col items-center md:items-end justify-between text-xs text-slate-500 dark:text-slate-400 shrink-0">
+                <span class="px-3 py-1 rounded-full font-mono font-medium bg-blue-500/10 text-blue-600 dark:text-cyan-400 border border-blue-500/20">Currently Pursuing (2nd Year)</span>
+                <span class="mt-1 flex items-center space-x-1">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Dindigul / Tamil Nadu, India</span>
+                </span>
+              </div>
+            </div>
+
+            <p class="mt-6 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+              Currently pursuing a second-year B.E. in Electronics and Communication Engineering, developing technical knowledge in engineering, programming, and problem solving.
+            </p>
+          </div>
+
+          <!-- Akshaya Academy Card -->
+          <div class="relative p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-lg transition-all hover:shadow-xl">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+              <div class="flex items-start space-x-4">
+                <div class="p-3.5 rounded-2xl bg-gradient-to-br from-cyan-500 to-teal-500 text-white shadow-md shrink-0">
+                  <i class="fa-solid fa-school text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono font-bold text-cyan-500 uppercase tracking-wider block">Schooling</span>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Akshaya Academy CBSE (TAAC)</h3>
+                  <p class="text-sm font-semibold text-blue-600 dark:text-cyan-400 mt-0.5">School Education (CBSE Curriculum)</p>
+                </div>
+              </div>
+
+              <div class="flex md:flex-col items-center md:items-end justify-between text-xs text-slate-500 dark:text-slate-400 shrink-0">
+                <span class="px-3 py-1 rounded-full font-mono font-medium bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">Alumnus</span>
+                <span class="mt-1 flex items-center space-x-1">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Tamil Nadu, India</span>
+                </span>
+              </div>
+            </div>
+
+            <p class="mt-6 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+              Alumnus of Akshaya Academy CBSE (TAAC). Completed secondary school education with a strong grounding in core science and analytical fundamentals.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 relative border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Technical Skills</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Focused learning topics & analytical foundation</p>
+          <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          
+          <!-- Category 1: Programming & Logic -->
+          <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 transition-all">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center space-x-2">
+                <i class="fa-solid fa-code text-blue-500"></i>
+                <span>Programming & Logic</span>
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Focusing on clean logic, structure, and systematic code writing.</p>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Python (Featured Emphasis) -->
+              <div class="p-4 rounded-2xl border border-cyan-500/50 bg-gradient-to-r from-cyan-500/10 via-blue-500/5 to-transparent shadow-md">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <i class="fa-brands fa-python text-cyan-500 text-xl"></i>
+                    <span class="font-bold text-base text-cyan-500 dark:text-cyan-400">Python</span>
+                    <span class="px-2 py-0.5 text-[10px] font-mono font-bold rounded bg-cyan-500 text-slate-950 uppercase tracking-wider">Primary Focus</span>
+                  </div>
+                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">Active Learner</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Core language syntax, data manipulation & algorithmic problem solving</p>
+              </div>
+
+              <!-- Problem Solving -->
+              <div class="p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50/40 dark:bg-slate-800/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Problem Solving</span>
+                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">Key Skill</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Algorithmic thinking and breaking down complex requirements step-by-step</p>
+              </div>
+
+              <!-- Logical Thinking -->
+              <div class="p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50/40 dark:bg-slate-800/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Logical Thinking</span>
+                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">Core Aptitude</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Structured analysis and systematic technical deduction</p>
+              </div>
+
+              <!-- Analytical Problem Solving -->
+              <div class="p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50/40 dark:bg-slate-800/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Analytical Approach</span>
+                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">Mindset</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Root cause analysis and structured debugging methodologies</p>
+              </div>
+
+              <!-- Debugging -->
+              <div class="p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50/40 dark:bg-slate-800/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Debugging</span>
+                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">Practice</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Code inspection, error tracing, and systematic testing</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Engineering Foundations -->
+          <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 transition-all">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center space-x-2">
+                <i class="fa-solid fa-microchip text-blue-500"></i>
+                <span>Engineering Foundations</span>
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Academic concepts forming the bridge between hardware and software.</p>
+            </div>
+
+            <div class="space-y-4">
+              <!-- ECE Fundamentals -->
+              <div class="p-4 rounded-2xl border border-blue-500/30 bg-blue-500/5">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm sm:text-base text-slate-800 dark:text-slate-200">ECE Fundamentals</span>
+                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">Core Academic</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Circuit theory, electronic components, and basic signal concepts</p>
+              </div>
+
+              <!-- Circuit Analysis -->
+              <div class="p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50/40 dark:bg-slate-800/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Circuit Analysis</span>
+                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">Academic</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Understanding voltage, current, and electronic component behaviors</p>
+              </div>
+
+              <!-- Digital Logic -->
+              <div class="p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50/40 dark:bg-slate-800/30">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Digital Logic Basics</span>
+                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">Academic</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Boolean algebra, logic gates, and binary arithmetic principles</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHAT I'M BUILDING SECTION -->
+    <section id="building" class="py-20 relative bg-slate-500/5 border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-mono font-bold text-cyan-500 uppercase tracking-widest block mb-2">LEARNING MINDSET</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">What I'm Building</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Core pillars of my ongoing technical development journey</p>
+          <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <!-- Card 1: Programming -->
+          <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-500/40 flex flex-col justify-between">
+            <div>
+              <div class="p-3.5 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 text-cyan-500 w-fit mb-6 border border-cyan-500/20">
+                <i class="fa-solid fa-code text-xl"></i>
+              </div>
+
+              <span class="text-xs font-mono text-cyan-500 font-bold block mb-1">Python & Software Logic</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">Programming</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">Developing Python programming skills and strengthening programming fundamentals.</p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200/60 dark:border-slate-800/80">
+              <span class="text-[11px] font-mono font-semibold text-slate-400 block mb-2 uppercase tracking-wider">Key Focus</span>
+              <ul class="space-y-1.5">
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Python Syntax & Data Structures</span>
+                </li>
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Clean Code Practices</span>
+                </li>
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Logic Implementation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2: Problem Solving -->
+          <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-500/40 flex flex-col justify-between">
+            <div>
+              <div class="p-3.5 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 text-cyan-500 w-fit mb-6 border border-cyan-500/20">
+                <i class="fa-solid fa-brain text-xl"></i>
+              </div>
+
+              <span class="text-xs font-mono text-cyan-500 font-bold block mb-1">Analytical & Structured</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">Problem Solving</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">Improving logical thinking, debugging ability, and analytical approaches to technical problems.</p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200/60 dark:border-slate-800/80">
+              <span class="text-[11px] font-mono font-semibold text-slate-400 block mb-2 uppercase tracking-wider">Key Focus</span>
+              <ul class="space-y-1.5">
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Algorithmic Reasoning</span>
+                </li>
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Debugging & Optimization</span>
+                </li>
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Step-by-Step Problem Breakdown</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: Engineering -->
+          <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-500/40 flex flex-col justify-between">
+            <div>
+              <div class="p-3.5 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 text-cyan-500 w-fit mb-6 border border-cyan-500/20">
+                <i class="fa-solid fa-microchip text-xl"></i>
+              </div>
+
+              <span class="text-xs font-mono text-cyan-500 font-bold block mb-1">ECE Hardware & Theory</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">Engineering</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">Building a strong foundation in Electronics and Communication Engineering fundamentals.</p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200/60 dark:border-slate-800/80">
+              <span class="text-[11px] font-mono font-semibold text-slate-400 block mb-2 uppercase tracking-wider">Key Focus</span>
+              <ul class="space-y-1.5">
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Circuit Theory Fundamentals</span>
+                </li>
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Signals & Electronics</span>
+                </li>
+                <li class="text-xs text-slate-600 dark:text-slate-300 flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  <span>Hardware-Software Concepts</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STRENGTHS SECTION -->
+    <section id="strengths" class="py-20 relative border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Strengths</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Attributes that drive learning and performance</p>
+          <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-6 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 transition-all hover:scale-[1.02]">
+            <div class="p-3 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 text-cyan-500 w-fit mb-4 border border-cyan-500/20">
+              <i class="fa-solid fa-bolt text-lg"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">Continuous Learning</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Strong interest in learning Python and continuously improving programming skills.</p>
+          </div>
+
+          <div class="p-6 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 transition-all hover:scale-[1.02]">
+            <div class="p-3 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 text-cyan-500 w-fit mb-4 border border-cyan-500/20">
+              <i class="fa-solid fa-bullseye text-lg"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">Problem Solving</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">A problem-solving mindset with a focus on finding practical solutions.</p>
+          </div>
+
+          <div class="p-6 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 transition-all hover:scale-[1.02]">
+            <div class="p-3 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 text-cyan-500 w-fit mb-4 border border-cyan-500/20">
+              <i class="fa-solid fa-fire text-lg"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">Self-Motivation</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Self-motivated and focused on achieving personal and professional goals.</p>
+          </div>
+
+          <div class="p-6 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 transition-all hover:scale-[1.02]">
+            <div class="p-3 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 text-cyan-500 w-fit mb-4 border border-cyan-500/20">
+              <i class="fa-solid fa-sparkles text-lg"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">Adaptability</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Willingness to learn new technologies and develop technical expertise.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERESTS SECTION -->
+    <section id="interests" class="py-20 relative bg-slate-500/5 border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-mono font-bold text-cyan-500 uppercase tracking-widest block mb-2">PERSONAL DISCIPLINE & PASSIONS</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Beyond the Code</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Activities and interests that build teamwork and focus</p>
+          <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          
+          <!-- Basketball Card -->
+          <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 relative overflow-hidden transition-all shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Athletics & Team Dynamics</span>
+              <span class="text-2xl text-amber-500"><i class="fa-solid fa-basketball"></i></span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Basketball</h3>
+            <p class="text-xs text-cyan-500 font-semibold mt-0.5 mb-4">Sportsmanship & Strategic Play</p>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              I enjoy basketball and value the teamwork, discipline, communication, coordination, and decision-making that come with the sport.
+            </p>
+
+            <div>
+              <span class="text-[11px] font-mono text-slate-400 block mb-2">Key Values Highlighted:</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-amber-500 border border-amber-500/30 bg-amber-500/10">Teamwork</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-amber-500 border border-amber-500/30 bg-amber-500/10">Discipline</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-amber-500 border border-amber-500/30 bg-amber-500/10">Communication</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-amber-500 border border-amber-500/30 bg-amber-500/10">Coordination</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-amber-500 border border-amber-500/30 bg-amber-500/10">Decision Making</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technology & Programming Card -->
+          <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 relative overflow-hidden transition-all shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Technology & Exploration</span>
+              <span class="text-2xl text-cyan-400"><i class="fa-solid fa-laptop-code"></i></span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Technology & Programming</h3>
+            <p class="text-xs text-cyan-500 font-semibold mt-0.5 mb-4">Software Curiosity & Electronics</p>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              Interested in Python programming, problem solving, and exploring technology.
+            </p>
+
+            <div>
+              <span class="text-[11px] font-mono text-slate-400 block mb-2">Key Values Highlighted:</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-cyan-400 border border-cyan-500/30 bg-cyan-500/10">Python</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-cyan-400 border border-cyan-500/30 bg-cyan-500/10">Problem Solving</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-cyan-400 border border-cyan-500/30 bg-cyan-500/10">Tech Exploration</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium text-cyan-400 border border-cyan-500/30 bg-cyan-500/10">Hands-on Learning</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAREER OBJECTIVE SECTION -->
+    <section id="career" class="py-20 relative border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="p-8 sm:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-900 dark:via-slate-900/90 dark:to-slate-950 relative overflow-hidden text-center shadow-2xl">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="p-3.5 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white w-fit mx-auto mb-6 shadow-lg">
+              <i class="fa-solid fa-bullseye text-2xl"></i>
+            </div>
+
+            <span class="text-xs font-mono font-bold text-cyan-500 uppercase tracking-widest block mb-3">VISION & DIRECTION</span>
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Career Objective</h2>
+
+            <blockquote class="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed max-w-3xl mx-auto text-slate-800 dark:text-slate-100 italic">
+              "To build a strong career in technology and engineering by continuously developing programming, problem-solving, and technical skills while gaining practical experience through projects, internships, and collaborative work."
+            </blockquote>
+
+            <div class="mt-8 pt-6 border-t border-slate-200/60 dark:border-slate-800/80 inline-block">
+              <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30">
+                Learning today. Building tomorrow.
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-20 relative bg-slate-500/5 border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-mono font-bold text-cyan-500 uppercase tracking-widest block mb-2">PORTFOLIO ARCHITECTURE</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Projects & Learning</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Future project showcase & dynamic learning container</p>
+          <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <!-- Filter Buttons Architecture -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+          <button class="project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-blue-600 text-white shadow-md" data-filter="all">All</button>
+          <button class="project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-filter="python">Python</button>
+          <button class="project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-filter="ece">ECE / Hardware</button>
+          <button class="project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-filter="logic">Problem Solving</button>
+        </div>
+
+        <!-- Placeholder State -->
+        <div class="max-w-3xl mx-auto">
+          <div class="p-8 sm:p-12 rounded-3xl border border-dashed border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/60 text-center transition-all">
+            <div class="p-4 rounded-full bg-blue-500/10 text-cyan-500 w-fit mx-auto mb-4 animate-bounce">
+              <i class="fa-solid fa-code text-3xl"></i>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-2">Projects Coming Soon</h3>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed mb-6">
+              Currently building skills in Python, problem solving, and engineering fundamentals. This section will showcase practical projects as they are developed.
+            </p>
+
+            <div>
+              <a href="#contact" class="px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md hover:shadow-lg transition-all inline-flex items-center space-x-2">
+                <span>Have a project idea? Let's Connect</span>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 relative border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Let's Connect</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2">
+            I'm always interested in learning, collaborating, exploring opportunities, and connecting with people in technology and engineering.
+          </p>
+          <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-10 max-w-5xl mx-auto">
+          
+          <!-- Contact Details Sidebar -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-lg">
+              <h3 class="text-xl font-bold mb-6">Contact Details</h3>
+
+              <div class="space-y-6">
+                <!-- Location -->
+                <div class="flex items-start space-x-4">
+                  <div class="p-3 rounded-2xl bg-blue-500/10 text-blue-500 shrink-0">
+                    <i class="fa-solid fa-location-dot text-xl"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Location</span>
+                    <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                      Oddanchatram, Tamil Nadu, India
+                    </span>
+                  </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="flex items-start space-x-4">
+                  <div class="p-3 rounded-2xl bg-cyan-500/10 text-cyan-500 shrink-0">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">LinkedIn Profile</span>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 dark:text-cyan-400 hover:underline flex items-center space-x-1 mt-0.5">
+                      <span>Connect on LinkedIn</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Academic Institution -->
+                <div class="flex items-start space-x-4">
+                  <div class="p-3 rounded-2xl bg-teal-500/10 text-teal-500 shrink-0">
+                    <i class="fa-solid fa-graduation-cap text-xl"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Institution</span>
+                    <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                      SSM Institute of Engineering and Technology
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-lg">
+              <h3 class="text-xl font-bold mb-6">Send a Message</h3>
+
+              <!-- Form Success Feedback Alert -->
+              <div id="formSuccessAlert" class="hidden p-6 rounded-2xl bg-green-500/10 border border-green-500/20 text-center space-y-2 mb-4">
+                <i class="fa-solid fa-circle-check text-green-500 text-3xl"></i>
+                <h4 class="font-bold text-green-600 dark:text-green-400">Message Sent!</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Thank you for reaching out. I'll get back to you as soon as possible.
+                </p>
+              </div>
+
+              <form id="contactForm" class="space-y-4">
+                <div>
+                  <label for="userName" class="block text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 mb-1">YOUR NAME</label>
+                  <input type="text" id="userName" required placeholder="e.g. Alex Morgan" class="w-full px-4 py-3 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all" />
+                </div>
+
+                <div>
+                  <label for="userEmail" class="block text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 mb-1">YOUR EMAIL</label>
+                  <input type="email" id="userEmail" required placeholder="e.g. alex@example.com" class="w-full px-4 py-3 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all" />
+                </div>
+
+                <div>
+                  <label for="userMessage" class="block text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 mb-1">MESSAGE</label>
+                  <textarea id="userMessage" rows="4" required placeholder="Type your message here..." class="w-full px-4 py-3 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center space-x-2">
+                  <i class="fa-solid fa-paper-plane text-xs"></i>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-950 text-slate-600 dark:text-slate-400 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Brand Info -->
+        <div class="text-center md:text-left">
+          <h4 class="font-bold text-lg text-slate-900 dark:text-slate-100">Srinandan Veeraragavan</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">ECE Student • Python Learner • Problem Solver</p>
+        </div>
+
+        <!-- Links -->
+        <div class="flex items-center space-x-6">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors flex items-center space-x-1.5 text-xs font-semibold">
+            <i class="fa-brands fa-linkedin text-sm"></i>
+            <span>LinkedIn</span>
+          </a>
+
+          <button id="scrollToTopBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-800 hover:bg-slate-500/10 transition-colors text-xs font-mono flex items-center space-x-1">
+            <span>Back to top</span>
+            <i class="fa-solid fa-arrow-up text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-slate-200/50 dark:border-slate-800/50 text-center text-xs text-slate-500">
+        © 2026 Srinandan Veeraragavan. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL -->
+  <div id="resumeModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="relative w-full max-w-lg p-6 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-all">
+      <button id="closeResumeBtn" class="absolute top-4 right-4 p-2 rounded-full hover:bg-slate-500/10 transition-colors" aria-label="Close modal">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="p-3 rounded-xl bg-blue-500/10 text-blue-500">
+          <i class="fa-solid fa-file-arrow-down text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Resume Download</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Srinandan Veeraragavan — Academic Resume</p>
+        </div>
+      </div>
+
+      <div class="space-y-4 my-4 text-sm text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50">
+        <p>The profile resume file path is configured as <code class="text-cyan-500 font-mono text-xs">/resume.pdf</code>.</p>
+        <div class="flex items-start space-x-2 text-xs text-slate-500 dark:text-slate-400">
+          <i class="fa-solid fa-circle-check text-green-500 shrink-0 mt-0.5"></i>
+          <span>Structured for easy replacement with Srinandan's official academic resume PDF file.</span>
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-3 pt-2">
+        <button id="cancelResumeBtn" class="px-4 py-2 text-sm font-medium rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          Close
+        </button>
+        <a id="downloadResumeLink" href="/resume.pdf" download="Srinandan_Veeraragavan_Resume.pdf" class="px-4 py-2 text-sm font-medium rounded-lg bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/25 transition-all flex items-center space-x-2">
+          <i class="fa-solid fa-download text-xs"></i>
+          <span>Download Sample PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- 1. Theme Toggle Logic ---
+    const htmlElement = document.documentElement;
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeToggleMobileBtn = document.getElementById('themeToggleMobile');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeIconMobile = document.getElementById('themeIconMobile');
+
+    function updateThemeUI(isDark) {
+      if (isDark) {
+        htmlElement.classList.add('dark');
+        themeIcon.className = 'fa-solid fa-sun';
+        themeIconMobile.className = 'fa-solid fa-sun';
+      } else {
+        htmlElement.classList.remove('dark');
+        themeIcon.className = 'fa-solid fa-moon';
+        themeIconMobile.className = 'fa-solid fa-moon';
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = htmlElement.classList.contains('dark');
+      updateThemeUI(!isDark);
+    }
+
+    themeToggleBtn.addEventListener('click', toggleTheme);
+    themeToggleMobileBtn.addEventListener('click', toggleTheme);
+
+    // --- 2. Mobile Menu Toggle ---
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // --- 3. Dynamic Typing Effect ---
+    const typingWords = ['ECE Student', 'Python Learner', 'Problem Solver', 'Tech Enthusiast'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById('typingElement');
+
+    function typeEffect() {
+      const currentWord = typingWords[wordIndex];
+      
+      if (isDeleting) {
+        charIndex--;
+      } else {
+        charIndex++;
+      }
+
+      typingElement.textContent = currentWord.substring(0, charIndex);
+
+      let typeSpeed = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 1800; // Pause at end of word
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % typingWords.length;
+        typeSpeed = 300;
+      }
+
+      setTimeout(typeEffect, typeSpeed);
+    }
+
+    typeEffect();
+
+    // --- 4. Interactive PCB Circuit Background Canvas ---
+    const canvas = document.getElementById('circuitCanvas');
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+
+    function resizeCanvas() {
+      if (!canvas.parentElement) return;
+      canvas.width = canvas.parentElement.offsetWidth;
+      canvas.height = canvas.parentElement.offsetHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    const nodes = [];
+    const nodeCount = Math.max(15, Math.floor(window.innerWidth / 45));
+
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * (canvas.width || 800),
+        y: Math.random() * (canvas.height || 600),
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        radius: Math.random() * 2 + 1.5,
+        pulse: Math.random() * Math.PI * 2,
+        pulseSpeed: 0.02 + Math.random() * 0.03
+      });
+    }
+
+    function drawCircuit() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const isDark = htmlElement.classList.contains('dark');
+      const nodeColor = isDark ? '#06B6D4' : '#2563EB';
+      const strokePrefix = 'rgba(37, 99, 235, ';
+
+      nodes.forEach((node, i) => {
+        node.x += node.vx;
+        node.y += node.vy;
+
+        if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+        if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+
+        node.pulse += node.pulseSpeed;
+        const currentRadius = node.radius + Math.sin(node.pulse) * 0.8;
+
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, Math.max(0.5, currentRadius), 0, Math.PI * 2);
+        ctx.fillStyle = nodeColor;
+        ctx.shadowBlur = isDark ? 8 : 4;
+        ctx.shadowColor = nodeColor;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        for (let j = i + 1; j < nodes.length; j++) {
+          const other = nodes[j];
+          const dx = Math.abs(node.x - other.x);
+          const dy = Math.abs(node.y - other.y);
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 130) {
+            const alpha = (1 - dist / 130) * (isDark ? 0.25 : 0.15);
+            ctx.beginPath();
+            ctx.moveTo(node.x, node.y);
+
+            const midX = (node.x + other.x) / 2;
+            ctx.lineTo(midX, node.y);
+            ctx.lineTo(midX, other.y);
+            ctx.lineTo(other.x, other.y);
+
+            ctx.strokeStyle = `${strokePrefix}${alpha})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      });
+
+      animationFrameId = requestAnimationFrame(drawCircuit);
+    }
+
+    window.onload = function () {
+      drawCircuit();
+    };
+
+    // --- 5. Scroll Progress Indicator & Active Nav Link ---
+    const scrollProgressBar = document.getElementById('scrollProgress');
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      scrollProgressBar.style.width = `${progress}%`;
+
+      let currentSectionId = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('text-blue-500', 'dark:text-cyan-400', 'bg-blue-500/10', 'font-semibold');
+        } else {
+          link.classList.remove('text-blue-500', 'dark:text-cyan-400', 'bg-blue-500/10', 'font-semibold');
+        }
+      });
+    });
+
+    // Back to Top Button
+    document.getElementById('scrollToTopBtn').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // --- 6. Resume Modal Controller ---
+    const resumeModal = document.getElementById('resumeModal');
+    const openResumeBtn = document.getElementById('openResumeBtn');
+    const closeResumeBtn = document.getElementById('closeResumeBtn');
+    const cancelResumeBtn = document.getElementById('cancelResumeBtn');
+    const downloadResumeLink = document.getElementById('downloadResumeLink');
+
+    function openModal() {
+      resumeModal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      resumeModal.classList.add('hidden');
+    }
+
+    openResumeBtn.addEventListener('click', openModal);
+    closeResumeBtn.addEventListener('click', closeModal);
+    cancelResumeBtn.addEventListener('click', closeModal);
+
+    downloadResumeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Graceful fallback message inside iframe environment
+      const messageCard = document.createElement('div');
+      messageCard.className = 'fixed bottom-6 right-6 z-50 p-4 rounded-xl bg-blue-600 text-white shadow-xl text-xs font-semibold animate-bounce';
+      messageCard.textContent = 'Resume download initialized (/resume.pdf).';
+      document.body.appendChild(messageCard);
+      setTimeout(() => messageCard.remove(), 3000);
+      closeModal();
+    });
+
+    // --- 7. Contact Form Handler ---
+    const contactForm = document.getElementById('contactForm');
+    const formSuccessAlert = document.getElementById('formSuccessAlert');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formSuccessAlert.classList.remove('hidden');
+      contactForm.reset();
+      setTimeout(() => {
+        formSuccessAlert.classList.add('hidden');
+      }, 5000);
+    });
+
+    // --- 8. Project Category Filter Architecture ---
+    const filterBtns = document.querySelectorAll('.project-filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.className = 'project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors';
+        });
+        btn.className = 'project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-blue-600 text-white shadow-md';
+      });
+    });
+  </script>
+</body>
+</html>
